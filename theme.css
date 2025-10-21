@@ -1,0 +1,148 @@
+/* --- 1. Global & Typography Reset --- */
+
+/* Define Color Palette and Fonts */
+:root {
+    --color-primary: #36454F;       /* Deep Charcoal (Text/Headings) */
+    --color-secondary: #EAE0D7;     /* Soft Cream (Background) */
+    --color-accent: #C16757;        /* Burnt Orange (Links/Hover) */
+    --color-light-text: #607274;    /* Muted Grey (Meta/Footer) */
+    
+    /* Font Definitions based on user request */
+    --font-page: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-post: 'Courier Prime', monospace;
+}
+
+/* Apply base styling to the body */
+body {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-family: var(--font-post); /* Default text uses Courier */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 760px; /* Optimal width for reading comfort */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 2. Header & Navigation --- */
+
+.site-header {
+    background-color: transparent;
+    padding: 40px 0 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.site-title {
+    font-family: var(--font-page);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li a {
+    font-family: var(--font-page);
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-primary);
+    padding: 0 15px;
+    transition: color 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.main-nav li a:hover {
+    color: var(--color-accent);
+}
+
+/* --- 3. Post Content --- */
+
+main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.post {
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed var(--color-light-text);
+}
+
+.post:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.post-title {
+    font-family: var(--font-post);
+    font-size: 1.8em;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-primary);
+    margin-top: 0;
+}
+
+.post-meta {
+    font-family: var(--font-page);
+    font-size: 0.8em;
+    color: var(--color-light-text);
+    margin-bottom: 20px;
+}
+
+.post-excerpt {
+    font-size: 1em;
+    margin-bottom: 25px;
+}
+
+.read-more {
+    font-family: var(--font-post);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-accent);
+    transition: color 0.3s;
+    font-size: 0.95em;
+}
+
+.read-more:hover {
+    color: var(--color-primary);
+}
+
+/* --- 4. Footer --- */
+
+.site-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 30px 0;
+    text-align: center;
+    font-family: var(--font-page);
+    font-size: 0.8em;
+    color: var(--color-light-text);
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: var(--color-light-text);
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+}
